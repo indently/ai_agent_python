@@ -137,7 +137,7 @@ class Agent:
 
     def tool(self, func: Callable[..., Any]) -> Callable[..., Any]:
         """Decorator to register a function as a tool on this agent."""
-        return self.tools.register_callable(func)
+        return self.tools.register(func)
 
     def context(self, func: Callable[[], str]) -> Callable[[], str]:
         """Decorator to register a zero-arg function that returns context text for this agent."""
